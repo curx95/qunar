@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -9,6 +9,7 @@
           <div class="icon-dec">{{ item.dec }}</div>
         </div>
       </swiper-slide>
+      <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -18,6 +19,10 @@ export default {
   name: 'HomeIcons',
   data () {
     return {
+      swiperOption: {
+        pagination: '.swiper-pagination',
+        autoplay: false
+      },
       iconsData: [{
         id: '001',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
@@ -83,40 +88,26 @@ export default {
 
 <style lang="stylus" scoped>
   @import '~styles/variables.styl'
-  .icons
-    overflow hidden
+  .icons >>> .swiper-container
     height 3.7rem
     padding-top: .1rem
     background-color #fff
     .icon
-      float: left;
-      width: 25%;
-      height: 1.5rem;
-      padding-top: .1rem;
-      text-align: center;
-      // position relative
-      // overflow hidden
-      // float left
-      // width 25%
-      // height 0
-      // padding-bottom 25%
+      float: left
+      width: 25%
+      height: 1.5rem
+      padding-top: .1rem
+      text-align: center
       .icon-img
-        display: inline-block;
-        width: 1.1rem;
-        height: 1.1rem;
-        // position absolute
-        // left 0
-        // right 0
-        // top 0
-        // bottom .44rem
-        // box-sizing border-box
-        // padding .1rem
+        display: inline-block
+        width: 1.1rem
+        height: 1.1rem
         .icon-img-content
-            width: 1.1rem;
-            height: 1.1rem;
-            background: 0;
+            width: 1.1rem
+            height: 1.1rem
+            background: 0
       .icon-dec
-        margin-top: .1rem;
-        color: #212121;
-        font-size: .28rem;
+        margin-top: .1rem
+        color: #212121
+        font-size: .28rem
 </style>
