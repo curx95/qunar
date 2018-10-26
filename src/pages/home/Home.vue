@@ -25,5 +25,5 @@ export default {
 
 <style lang="stylus" scoped>
   .home
-    background-color #212121
+    background-color #f5f5f5
 </style>
