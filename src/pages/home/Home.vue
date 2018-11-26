@@ -5,6 +5,7 @@
     <home-icons></home-icons>
     <home-recommend></home-recommend>
     <home-hotList></home-hotList>
+    <home-mayYouLike></home-mayYouLike>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeHotList from './components/HotList'
+import HomeMayYouLike from './components/MayYouLike'
 export default {
   name: 'Home',
   components: {
@@ -21,12 +23,14 @@ export default {
     HomeSwiper,
     HomeIcons,
     HomeRecommend,
-    HomeHotList
+    HomeHotList,
+    HomeMayYouLike
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  .home
-    background-color #f5f5f5
+.home {
+  background-color: #f5f5f5;
+}
 </style>
