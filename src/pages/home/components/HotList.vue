@@ -24,7 +24,7 @@
           <div class="hotsale-list-imgcon">
             <img class="hotsale-list-img" :src="item.img" alt="">
           </div>
-          <div class="hotsale-list-sight">{{item.sight}}</div>s
+          <div class="hotsale-list-sight">{{item.sight}}</div>
           <div class="hotsale-list-price">
             <span class="hotsale-price">
               ¥
