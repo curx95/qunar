@@ -6,6 +6,7 @@
     <home-recommend></home-recommend>
     <home-hotList></home-hotList>
     <home-mayYouLike></home-mayYouLike>
+    <home-weekend></home-weekend>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeHotList from './components/HotList'
 import HomeMayYouLike from './components/MayYouLike'
+import HomeWeekend from './components/Weekend'
 export default {
   name: 'Home',
   components: {
@@ -24,7 +26,8 @@ export default {
     HomeIcons,
     HomeRecommend,
     HomeHotList,
-    HomeMayYouLike
+    HomeMayYouLike,
+    HomeWeekend
   }
 }
 </script>
